@@ -1,0 +1,652 @@
+:root {
+  --main-tx-cl: #212121;
+  --main-tx-par: #757575;
+  --main-bg-cl: #ffffff;
+  --accent-color: #2196f3;
+  --white-txt-cl: #ffffff;
+  --footer-bg-cl: #2f303a;
+  --baner-cl: #2f303a;
+  --cl-txt-ft: rgba(255, 255, 255, 0.6);
+  --bg-cl-btn: #f5f4fa;
+  /* змінні для сітки в портфоліо */
+  --items: 3;
+  --indent: 30px;
+  --border-portfolio:1px solid #EEEEEE; 
+  /* змінні для сітки в команді */
+  --items-team: 4;
+  --indent-team: 30px;
+
+  --icon-color:#AFB1B8;
+  --roboto-type: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--main-tx-cl);
+  background-color: var(--main-bg-cl);
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+}
+
+/* скидання стилів */
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  display: block;
+  
+}
+
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding-bottom: 94px;
+}
+/* шапка */
+.header{
+border-bottom: 1px solid #ececec;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  
+}
+
+/* логотип */
+.logo {
+  color: #000000;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+
+  margin-right: 93px;
+}
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
+}
+
+.span {
+  color: var(--accent-color);
+}
+.span:hover,
+.span:focus {
+  color: var(--accent-color);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+}
+
+/* навігація головна*/
+.nav {
+  margin-right: auto;
+}
+
+.list-nav {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.link-nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--main-tx-cl);
+
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.link-nav.current{
+  color: var(--accent-color);
+
+}
+
+
+
+.auth {
+  color: var(--main-tx-par);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.auth-icon{
+  fill: currentColor;
+  margin-right: 10px;
+  
+}
+
+/* банер */
+.hero {
+  background-color: var(--baner-cl);
+  letter-spacing: 0.06em;
+  color: var(--white-txt-cl);
+  padding-top: 200px;
+  padding-bottom: 280px;
+  /* margin-bottom: 94p; */
+
+
+  background-image: linear-gradient( 
+    to right,
+   rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)),
+   url(../images/Img-hero.jpg);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+
+ max-width: 1600px;
+ margin-left: auto;
+ margin-right: auto; 
+}
+
+
+
+.hero-title {
+  color: var(--white-cl);
+  font-weight: 900;
+  line-height: calc(60 / 44);
+  font-size: 44px;
+  text-align: center;
+  text-transform: uppercase;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 30px;
+  width: 696px;
+}
+
+.hero-btn {
+  font-family: inherit;
+  color: var(--white-txt-cl);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  display: block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  width: 216px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #188CE8;
+
+}
+
+
+/* особливості */
+.special{
+  padding-top: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.special-list {
+  display: flex;
+  gap: 30px;
+}
+
+
+.special-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  color: var(--main-tx-cl);
+  
+ margin-top: 30px;
+  margin-bottom: 10px;
+  
+}
+
+.special-item {
+  flex-basis:calc((100%-30px*3)/4);
+
+}
+
+
+.icon {
+ display: flex;
+  background-color:#F5F4FA;;  
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+}
+
+.icon-special{
+
+  width: 70px;
+  height: 70px;
+  
+}
+
+.special-par {
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  color: var(--main-tx-par);
+}
+/* чим займаємось */
+
+.work-title {
+  color: var(--main-tx-cl);
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* наша команда */
+
+.team {
+  background-color: var(--bg-cl-btn);
+  padding-top: 94px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.team-title {
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  color: var(--main-tx-cl);
+
+ 
+  margin-bottom: 50px;
+}
+
+.team-names{
+  background-color: #ffffff;
+
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
+padding: 30px;
+}
+
+.item-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: var(--main-tx-cl);
+
+  margin-bottom: 10px;
+}
+.team-par {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  color: var(--main-tx-par);
+
+}
+
+/* соцсітки */
+.list-social{
+ display: flex;
+ 
+ margin-top: 10px;
+}
+
+
+.social-link{
+  display: flex;
+ width: 44px;
+ height: 44px;  
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+ 
+ 
+}
+
+.social-link:hover,
+.social-link:focus{
+color: var(--main-bg-cl);
+fill: #188CE8;
+background-color: #188CE8;
+border-radius: 50%;
+
+}
+
+
+.social-icons{
+
+width: 20px;
+height: 20px;
+
+fill: currentColor;
+
+}
+
+/* Постійні клієнти */
+.customers{
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.customers-title{
+  font-family: inherit;
+font-size: 36px;
+line-height: calc(42 / 36);
+text-align: center;
+color: var(--main-tx-cl);
+margin-bottom: 50px;
+
+
+}
+
+.customers-list {
+  display: flex;
+  flex-wrap: wrap;
+    gap: 30px;
+ flex-basis:calc((100%-30px*5)/6);
+
+}
+
+.customers-item{
+  display: flex;
+  width: 170px;
+  height: 92px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+   fill:#AFB1B8;
+}
+
+.customers-item:hover,
+.customers-item:focus{
+ fill: var(--accent-color);
+ border-color:  var(--accent-color);
+  
+}
+
+
+.customers-icons{
+
+width: 106px;
+height: 60px;
+
+}
+
+
+/* підвал */
+
+.footer {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--footer-bg-cl);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+
+}
+.containe-footer{
+  display: flex;
+  align-items:baseline;
+}
+.logo-ft {
+  color: var(--white-txt-cl);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  text-decoration: none; 
+}
+.logo-ft:hover,
+.logo-ft:hover {
+  color: var(--accent-color);
+}
+
+/* адрес в підвалі */
+.address {
+  margin-top: 20px;
+  margin-right: 70px;
+  font-family: 'Roboto';
+
+}
+
+.address-item{
+  margin-bottom: 9px;
+}
+
+.address-item:last-child {
+  margin-bottom: 0;
+}
+
+.address-post {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  color: var(--white-txt-cl);
+}
+
+.address-el {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 14px;
+  line-height:calc(24 / 14);
+  color: var(--cl-txt-ft);
+} 
+
+
+/* Приєднуйтесь */
+
+.footer-par{
+ font-family: var(--roboto-type);
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: calc(16 / 14);
+text-transform: uppercase;
+color:var(--white-txt-cl);
+}
+.ft-social{
+ display: flex;
+ 
+ margin-top: 20px;
+}
+.social-item{
+  margin-right: 10px;
+}
+.social-item:last-child{
+  margin-right: 0;
+}
+
+.social-link-ft{
+  display: flex;
+ width: 44px;
+ height: 44px;  
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+ background-color: rgb(255, 255, 255, 0.1);
+ border-radius: 50%;
+
+ 
+}
+
+.social-link-ft:hover,
+.social-link-ft:focus{
+color: var(--main-bg-cl);
+fill: #188CE8;
+background-color: #188CE8;
+border-radius: 50%;
+
+}
+
+
+.social-icons-ft{
+
+width: 20px;
+height: 20px;
+
+fill: currentColor;
+
+}
+
+
+
+
+
+
+
+/**
+  |============================
+  |  ПОРТФОЛІО 
+  |============================
+*/
+
+/* список  кнопок, радіокнопок */
+
+.portfolio{
+  padding-top: 94px;
+}
+.list-btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  
+  margin-bottom: 50px;
+}
+
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  color: var(--main-tx-cl);
+
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--bg-cl-btn);
+
+  border: none;
+  padding: 6px 22px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--main-bg-cl);
+  background-color: #2196F3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/* список робіт */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+ flex-basis:calc((100%-30px*2)/3) ;
+}
+
+.portfolio-link{
+  display: block;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus{
+ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
+  rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+
+
+.portfolio-el{
+  padding: 20px 24px;
+  border-right :var(--border-portfolio); 
+  border-bottom:var(--border-portfolio);
+  border-left: var(--border-portfolio);
+  
+
+}
+
+.title {
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--main-tx-cl);
+  margin-bottom: 4px;
+}
+
+.par {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: var(--main-tx-par);
+}
