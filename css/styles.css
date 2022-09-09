@@ -80,6 +80,7 @@ border-bottom: 1px solid #ececec;
 
 /* логотип */
 .logo {
+  
   color: #000000;
   font-family: 'Raleway', sans-serif;
   text-decoration: none;
@@ -92,7 +93,9 @@ border-bottom: 1px solid #ececec;
 }
 .logo:hover,
 .logo:focus {
+  
   color: var(--accent-color);
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .span {
@@ -101,11 +104,13 @@ border-bottom: 1px solid #ececec;
 .span:hover,
 .span:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* навігація головна*/
@@ -221,6 +226,7 @@ cursor: pointer;
   width: 696px;
 }
 
+
 .hero-btn {
   font-family: inherit;
   color: var(--white-txt-cl);
@@ -242,9 +248,75 @@ cursor: pointer;
 
 .hero-btn:hover,
 .hero-btn:focus {
-  background-color: #188CE8;
+  background-color:#188CE8 ;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
+/**
+  |============================
+  | МОДАЛЬНЕ ВІКНО
+  |============================
+*/
+.backdrop{
+  position: fixed;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+  left: 0;
+  top: 0;
+ z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 196, 196, 0.5);
+  opacity: 1;
+  
+}
+
+.backdrop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden.modal{
+  transform: translate(-50% , -50%) scale(0.7) ;
+  
+}
+
+
+.modal{
+  position: absolute;
+  top: 50% ;
+  left: 50% ;
+
+  transform: translate(-50% , -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) linear;
+
+  width:528px ;
+  height:581px ;
+  background-color: var(--main-bg-cl);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+   0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-button{
+position: absolute;
+top: 8px;
+right: 8px;
+padding: 0px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+width: 30px;
+height: 30px;
+
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+background-color: var(--main-bg-cl);
+cursor: pointer;
+}
+
 
 
 /* особливості */
@@ -420,6 +492,7 @@ color: var(--main-bg-cl);
 fill: #188CE8;
 background-color: #188CE8;
 border-radius: 50%;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -474,6 +547,7 @@ margin-bottom: 50px;
 .customers-item:focus{
  fill: var(--accent-color);
  border-color:  var(--accent-color);
+ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -510,6 +584,7 @@ height: 60px;
 .logo-ft:hover,
 .logo-ft:hover {
   color: var(--accent-color);
+ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* адрес в підвалі */
@@ -587,7 +662,7 @@ color: var(--main-bg-cl);
 fill: #188CE8;
 background-color: #188CE8;
 border-radius: 50%;
-
+ /* transition:  fill 1250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 
@@ -647,7 +722,11 @@ fill: currentColor;
 .btn:focus {
   color: var(--main-bg-cl);
   background-color: #2196F3;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px 
+  rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 /* список робіт */
 
@@ -660,7 +739,7 @@ fill: currentColor;
 
 .portfolio-link{
   display: block;
-  
+  transform:scale(1,1) ;
 }
 
 .portfolio-popup{
@@ -677,6 +756,7 @@ fill: currentColor;
 .portfolio-link:focus{
  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
   rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -717,8 +797,8 @@ background-color:rgba(33, 150, 243, 0.9); ;
 color:var(--white-txt-cl);
 }
 
-.portfolio-popup:hover .overlay,
-.portfolio-popup:focus .overlay{
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay{
   transform: translateY(0);
    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
